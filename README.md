@@ -185,7 +185,7 @@ dependencies {
 #### JCenter
 ``` java
 dependencies {
-      compile 'compile 'com.github.AntonioBG0:android-easy-view-content:0.1.1'
+      compile 'com.github.AntonioBG0:android-easy-view-content:0.1.1'
   }
 ```
 
