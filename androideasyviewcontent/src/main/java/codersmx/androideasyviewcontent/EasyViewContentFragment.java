@@ -1,4 +1,4 @@
-package codersmx.mylibrary;
+package codersmx.androideasyviewcontent;
 
 import android.support.v4.app.Fragment;
 import android.widget.ImageView;

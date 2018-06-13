@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -16,8 +17,9 @@ import org.json.JSONObject;
 import java.io.InputStream;
 import java.util.ArrayList;
 
-import codersmx.mylibrary.EasyViewContentActivity;
-import codersmx.mylibrary.EasyViewContent;
+import codersmx.androideasyviewcontent.EasyViewContent;
+import codersmx.androideasyviewcontent.EasyViewContentActivity;
+import codersmx.androideasyviewcontent.EasyViewContentRecycleViewAdapter;
 
 
 public class MainActivity extends EasyViewContentActivity {
@@ -73,16 +75,13 @@ public class MainActivity extends EasyViewContentActivity {
             jsonArray.put(jsonObject);
 
             // Instantiate adapter for recycle view.
-            RecyclerView.Adapter adapter = easyViewContent.recycleView(
+            RecyclerView.Adapter adapter = new EasyViewContentRecycleViewAdapter(
+                    this,
                     jsonArray,
                     R.layout.list_row,
-                    null,
                     ids_recycleview,
-                    values_recycleview,
-                    true,
-                    null,
-                    null,
-                    0);
+                    values_recycleview
+            );
 
             recyclerView.setAdapter(adapter);
 

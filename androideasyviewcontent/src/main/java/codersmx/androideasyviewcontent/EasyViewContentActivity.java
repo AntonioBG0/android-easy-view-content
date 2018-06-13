@@ -1,4 +1,4 @@
-package codersmx.mylibrary;
+package codersmx.androideasyviewcontent;
 
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;

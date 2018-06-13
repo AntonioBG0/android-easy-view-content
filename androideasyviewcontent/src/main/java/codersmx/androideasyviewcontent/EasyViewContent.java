@@ -1,4 +1,4 @@
-package codersmx.mylibrary;
+package codersmx.androideasyviewcontent;
 
 import android.animation.ObjectAnimator;
 import android.app.Activity;
@@ -32,7 +32,6 @@ public  class EasyViewContent {
     private Context context;
     private View view;
     private Fragment fragment;
-    private boolean customImgLoader = false;
 
 
     /**
@@ -41,14 +40,12 @@ public  class EasyViewContent {
      * @param context context
      * @param parentView parent view.
      * @param fragment fragment.
-     * @param customImgLoader image configuration tag.
      *
      */
-    public EasyViewContent(Context context, View parentView, Fragment fragment, boolean customImgLoader){
+    public EasyViewContent(Context context, View parentView, Fragment fragment){
         this.context = context;
         this.view = parentView;
         this.fragment = fragment;
-        this.customImgLoader = customImgLoader;
     }
 
     /**
@@ -119,7 +116,7 @@ public  class EasyViewContent {
                 } else if (field instanceof TextView) {
                     ((TextView) field).setText(data.getString(oikey.toString()).replace("\n", ""));
                 } else if (field instanceof ImageView) {
-                    if(customImgLoader){
+                    if(fragment != null){
                         configureImageLoader(((ImageView)field), data.getString(oikey.toString()));
                     }else {
                         ((ImageView)field).setImageBitmap(new DownloadImageFromUrl().execute(data.getString(oikey.toString())).get());
@@ -146,31 +143,5 @@ public  class EasyViewContent {
             ((EasyViewContentActivity)context).setUpCustomImageLoader(imageView, url);
         }
     }
-
-
-    /**
-     * Return a recycle view adapter
-     *
-     * @param data JSONArray.
-     * @param resource List row layout id.
-     * @param fragment This is required for custom image loader.
-     * @param viewId List of views id in layout.
-     * @param keyNames List of json key names.
-     * @param customImgLoader Boolean to check if will configure the loader.
-     * @param clickListener Configure row click listener.
-     * @param longClickListener Configure row long click.
-     * @param selectedPosition Defualt selected position.
-     * @return RecyclerView.Adapter
-     */
-    public RecyclerView.Adapter recycleView(final JSONArray data, int resource, final Fragment fragment,
-                                            final ArrayList<Integer> viewId,
-                                            final ArrayList<String> keyNames,
-                                            boolean customImgLoader,
-                                            EasyViewContentRecycleViewAdapter.ClickListener clickListener,
-                                            EasyViewContentRecycleViewAdapter.LongClickListener longClickListener,
-                                            int selectedPosition){
-        return new EasyViewContentRecycleViewAdapter(context, data, resource, viewId, keyNames, fragment, customImgLoader, clickListener, longClickListener, selectedPosition);
-    }
-
 
 }

@@ -1,4 +1,4 @@
-package codersmx.mylibrary;
+package codersmx.androideasyviewcontent;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

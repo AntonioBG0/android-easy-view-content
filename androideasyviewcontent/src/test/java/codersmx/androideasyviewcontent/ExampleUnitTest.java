@@ -1,4 +1,4 @@
-package codersmx.mylibrary;
+package codersmx.androideasyviewcontent;
 
 import org.junit.Test;
 
