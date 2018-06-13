@@ -1,5 +1,31 @@
 apply plugin: 'com.android.library'
 
+
+ext {
+    bintrayRepo = 'CodersMX'
+    bintrayName = 'android-easy-view-content'
+
+    publishedGroupId = 'com.github.AntonioBG0'
+    libraryName = 'android-easy-view-content'
+    artifact = 'android-easy-view-content'
+
+    libraryDescription = 'A library to easily set content to views.'
+
+    siteUrl = 'https://codersmx'
+    gitUrl = 'https://github.com/AntonioBG0/android-easy-view-content.git'
+    githubRepository= 'AntonioBG0/android-easy-view-content'
+
+    libraryVersion = '0.1.0'
+
+    developerId = 'codersmx'
+    developerName = 'Antonio BG'
+    developerEmail = 'jabg1992@email.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 27
 
@@ -35,5 +61,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
 
-apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.AntonioBG0'
+// Place it at the end of the file
+apply from: 'https://raw.githubusercontent.com/nisrulz/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nisrulz/JCenter/master/bintrayv1.gradle'
