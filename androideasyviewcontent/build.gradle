@@ -5,7 +5,7 @@ ext {
     bintrayRepo = 'CodersMX'
     bintrayName = 'android-easy-view-content'
 
-    publishedGroupId = 'com.github.AntonioBG0'
+    publishedGroupId = 'com.github.antoniobg0'
     libraryName = 'android-easy-view-content'
     artifact = 'android-easy-view-content'
 
@@ -15,7 +15,7 @@ ext {
     gitUrl = 'https://github.com/antoniobg0/android-easy-view-content.git'
     githubRepository= 'antoniobg0/android-easy-view-content'
 
-    libraryVersion = '0.1.2'
+    libraryVersion = '0.1.3'
 
     developerId = 'codersmx'
     developerName = 'Antonio BG'
