@@ -113,7 +113,7 @@ new EasyViewContentRecycleViewAdapter(
 
 #### Custom Image Loader.
 ##### Activity
-Activity must extends EasyViewContentActivity and override the following method.
+Activity must extends **EasyViewContentActivity** and override the following method.
 ``` java
 @Override
 public void setUpCustomImageLoader(ImageView imageView, String url){
@@ -137,7 +137,7 @@ new EasyViewContentRecycleViewAdapter(
 );
 ```
 ##### Fragment
-Activity must extends EasyViewContentFragment and override the same method as above.
+Activity must extends **EasyViewContentFragment** and override the same method as above.
 
 The adapter configuration
 ``` java
