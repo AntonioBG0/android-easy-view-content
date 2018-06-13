@@ -12,10 +12,10 @@ ext {
     libraryDescription = 'A library to easily set content to views.'
 
     siteUrl = 'https://codersmx'
-    gitUrl = 'https://github.com/AntonioBG0/android-easy-view-content.git'
-    githubRepository= 'AntonioBG0/android-easy-view-content'
+    gitUrl = 'https://github.com/antoniobg0/android-easy-view-content.git'
+    githubRepository= 'antoniobg0/android-easy-view-content'
 
-    libraryVersion = '0.1.1'
+    libraryVersion = '0.1.2'
 
     developerId = 'codersmx'
     developerName = 'Antonio BG'

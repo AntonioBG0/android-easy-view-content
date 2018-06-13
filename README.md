@@ -170,24 +170,7 @@ new EasyViewContentRecycleViewAdapter.LongClickListener() {
 	    }
 ```
 
-## Setup
-#### Maven
-``` java
-repositories { 
-   jcenter()
-   maven { url 'https://dl.bintray.com/antoniobg0/CodersMX' }
-}
 
-dependencies {
-  compile 'com.github.AntonioBG0:android-easy-view-content:0.1.1'
-}
-```
-#### JCenter
-``` java
-dependencies {
-      compile 'com.github.AntonioBG0:android-easy-view-content:0.1.1'
-  }
-```
 
 ## License
 
