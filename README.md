@@ -8,6 +8,8 @@ AEVC  provides easy way to fill simple views contents with JSON data.
 
 Android 4.0+ support
 
+**Current version: 0.1.0**
+
 ## Usage
 
 ### Acceptable URIs examples
