@@ -15,7 +15,7 @@ ext {
     gitUrl = 'https://github.com/AntonioBG0/android-easy-view-content.git'
     githubRepository= 'AntonioBG0/android-easy-view-content'
 
-    libraryVersion = '0.1.0'
+    libraryVersion = '0.1.1'
 
     developerId = 'codersmx'
     developerName = 'Antonio BG'
