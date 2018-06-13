@@ -1,14 +1,13 @@
 #  Android Easy View Content
 
 AEVC  provides easy way to fill simple views contents with JSON data.
+[ ![Download](https://api.bintray.com/packages/antoniobg0/CodersMX/android-easy-view-content/images/download.svg) ](https://bintray.com/antoniobg0/CodersMX/android-easy-view-content/_latestVersion)
 
 ## Features
  * TextView, ImageView, CheckBox views instances supported.
  * RecycleView adapter supported.
 
 Android 4.0+ support
-
-**Current version: 0.1.0**
 
 ## Usage
 
