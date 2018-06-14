@@ -1,11 +1,11 @@
 #  Android Easy View Content
 
-AEVC  provides easy way to fill simple views contents with JSON data.
+AEVC  provides easy way to fill simple views with JSON data.
 [ ![Download](https://api.bintray.com/packages/antoniobg0/CodersMX/android-easy-view-content/images/download.svg) ](https://bintray.com/antoniobg0/CodersMX/android-easy-view-content/_latestVersion)
 
 ## Features
- * TextView, ImageView, CheckBox views instances supported.
- * RecycleView adapter supported.
+ * TextView, ImageView, CheckBox support.
+ * RecycleView adapter support.
 
 Android 4.0+ support
 
@@ -38,6 +38,7 @@ JSONObject jsonObject = new JSONObject();
 jsonObject.put("textview_value", "EasyViewContent");
 jsonObject.put("imageview_value", "https://avatars0.githubusercontent.com/u/26068897?s=200&v=4");
 //{"textview_value": "EasyViewContent", "imageview_value" : "https://avatars0.githubusercontent.com/u/26068897?s=200&v=4"}
+// This can also be a API response (JSON) 
 ```
 ``` java
 // Create references of inflated view elements.
@@ -46,15 +47,19 @@ ArrayList<Integer> view_ids = new ArrayList<>();
 ArrayList<String> values = new ArrayList<>();
 
 // Id's of elements inflated within layout
-ids.add(R.id.view_1);
-ids.add(R.id.image_1);
+view_ids.add(R.id.view_1);
+view_ids.add(R.id.image_1);
 
 // JSON key names reference.
 values.add("textview_value");
 values.add("imageview_value");
 ```
+Then just call **easyContentByJSON()** method.
+``` java
+easyViewContent.easyContentByJSON(view_ids, values, jsonObject);
+```
 
-##### Both lists must be linear reference
+##### The lists must has linear reference
 ```
 This means, ID must be linked by it's own value at JSON object with the JSON key name.
 ```
@@ -170,7 +175,11 @@ new EasyViewContentRecycleViewAdapter.LongClickListener() {
 	    }
 ```
 
-
+## Setup
+Add the following dependency and sync gradle.
+``` java
+implementation 'com.github.antoniobg0:android-easy-view-content:0.1.5'
+```
 
 ## License
 
