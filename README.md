@@ -43,25 +43,27 @@ jsonObject.put("imageview_value", "https://avatars0.githubusercontent.com/u/2606
 ``` java
 // Create references of inflated view elements.
 
-ArrayList<Integer> view_ids = new ArrayList<>();
-ArrayList<String> values = new ArrayList<>();
+ArrayList<Integer> viewId = new ArrayList<>();
+ArrayList<String> jSONKeyName = new ArrayList<>();
 
-// Id's of elements inflated within layout
-view_ids.add(R.id.view_1);
-view_ids.add(R.id.image_1);
+// Id's of elements that will be inflated within layout
+viewId.add(R.id.view_1);
+viewId.add(R.id.image_1);
 
 // JSON key names reference.
-values.add("textview_value");
-values.add("imageview_value");
+jSONKeyName.add("textview_value");
+jSONKeyName.add("imageview_value");
 ```
 Then just call **easyContentByJSON()** method.
 ``` java
-easyViewContent.easyContentByJSON(view_ids, values, jsonObject);
+easyViewContent.easyContentByJSON(viewId, jSONKeyName, jsonObject);
 ```
 
 ##### The lists must has linear reference
 ```
-This means, ID must be linked by it's own value at JSON object with the JSON key name.
+This means, viewId list has the elements that will be inflated and jSONKeyNames list has the key name that that will be searched JSON.
+
+The order of the JSON doesn't matter.
 ```
 ![Linear Reference](https://codersmx.s3.amazonaws.com/public/linear-reference.png)
 
@@ -80,10 +82,10 @@ jsonArray.put(jsonObject);  // twice for this example.
 RecyclerView.Adapter adapter = easyViewContent.recycleView(
 		this, // Activity instance.
         jsonArray, // JSON Object array.
-		R.layout.list_row,  // Row view id.
-		ids_recycleview,  // View id's.
-		values_recycleview, // JSON key names.
-		);
+		R.layout.list_row,  // List row view id.
+		viewId,  // View id's (that are in the  row view).
+		jsonKeyNames, // JSON key names.
+		); 
 
 recyclerView.setAdapter(adapter);
 ```
@@ -94,8 +96,8 @@ new EasyViewContentRecycleViewAdapter(
         this,
 		jsonArray,
 		R.layout.list_row,
-		ids_recycleview,
-		values_recycleview,
+		viewId,
+		jSONKeyName,
 		// Custom image loader flag.
 		// Click.
 		// LongClick.
@@ -137,8 +139,8 @@ new EasyViewContentRecycleViewAdapter(
         this,
 		jsonArray,
 		R.layout.list_row,
-		ids_recycleview,
-		values_recycleview,
+		viewId,
+		jSONKeyName,
 		true
 );
 ```
@@ -151,8 +153,8 @@ new EasyViewContentRecycleViewAdapter(
         activity,
 		jsonArray,
 		R.layout.list_row,
-		ids_recycleview,
-		values_recycleview,
+		viewId,
+		jSONKeyName,
 		this
 );
 ```
